@@ -102,8 +102,7 @@ class _ChatScreenState extends State<ChatScreen> {
                               msg['content'] ?? '',
                               style: TextStyle(
                                 color: isMe ? Colors.white : Colors.black87,
-                                fontSize:
-                                    screenWidth * 0.042, // Responsive font
+                                fontSize: screenWidth * 0.042,
                               ),
                             ),
                           ),
@@ -130,20 +129,14 @@ class _ChatScreenState extends State<ChatScreen> {
                       decoration: InputDecoration(
                         hintText: 'Type a message...',
                         border: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(30),
-                          ), // Rounded border
+                          borderRadius: BorderRadius.all(Radius.circular(30)),
                         ),
                         enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(30),
-                          ), // Rounded border
+                          borderRadius: BorderRadius.all(Radius.circular(30)),
                           borderSide: BorderSide(color: Colors.grey),
                         ),
                         focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(30),
-                          ), // Rounded border
+                          borderRadius: BorderRadius.all(Radius.circular(30)),
                           borderSide: BorderSide(color: Colors.grey),
                         ),
                         contentPadding: EdgeInsets.symmetric(
@@ -154,7 +147,6 @@ class _ChatScreenState extends State<ChatScreen> {
                     ),
                   ),
                   SizedBox(width: screenWidth * 0.02),
-
                   IconButton(
                     icon: Icon(Icons.send, size: screenWidth * 0.07),
                     onPressed: () {

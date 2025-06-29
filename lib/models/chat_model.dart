@@ -18,7 +18,6 @@ class Chat {
   }
 
   String get chatName {
-    // Find the participant whose _id is NOT the current user
     final other = participants.firstWhere(
       (p) => p['_id'] != currentUserId,
       orElse: () => null,

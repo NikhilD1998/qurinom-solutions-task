@@ -14,7 +14,6 @@ class ChatMessagesBloc extends Bloc<ChatMessagesEvent, ChatMessagesState> {
     on<FetchMessages>((event, emit) async {
       emit(ChatMessagesLoading());
       try {
-        // Fetch initial messages
         final url = Uri.parse(
           '${baseApiUrl}messages/get-messagesformobile/${event.chatId}',
         );

@@ -36,7 +36,7 @@ class _LoginFormState extends State<LoginForm> {
     return Scaffold(
       appBar: AppBar(title: const Text('Login'), centerTitle: true),
       body: Padding(
-        padding: EdgeInsets.all(screenWidth * 0.06), // Responsive padding
+        padding: EdgeInsets.all(screenWidth * 0.06),
         child: BlocListener<LoginBloc, LoginState>(
           listener: (context, state) {
             if (state.loginResult != null) {
@@ -88,45 +88,35 @@ class _LoginFormState extends State<LoginForm> {
                   );
                 },
               ),
-              SizedBox(height: screenHeight * 0.04), // Responsive spacing
+              SizedBox(height: screenHeight * 0.04),
               TextField(
                 controller: _emailController,
                 onChanged: (value) =>
                     context.read<LoginBloc>().add(EmailChanged(value)),
-                style: TextStyle(
-                  fontSize: screenWidth * 0.045,
-                ), // Responsive font
+                style: TextStyle(fontSize: screenWidth * 0.045),
                 decoration: const InputDecoration(
                   labelText: 'Email',
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(30)),
-                    borderSide: BorderSide(
-                      color: Colors.grey,
-                    ), // <-- grey border
+                    borderSide: BorderSide(color: Colors.grey),
                   ),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(30)),
-                    borderSide: BorderSide(
-                      color: Colors.grey,
-                    ), // <-- grey border
+                    borderSide: BorderSide(color: Colors.grey),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(30)),
-                    borderSide: BorderSide(
-                      color: Colors.grey,
-                    ), // <-- grey border
+                    borderSide: BorderSide(color: Colors.grey),
                   ),
                 ),
               ),
-              SizedBox(height: screenHeight * 0.02), // Responsive spacing
+              SizedBox(height: screenHeight * 0.02),
               TextField(
                 controller: _passwordController,
                 obscureText: true,
                 onChanged: (value) =>
                     context.read<LoginBloc>().add(PasswordChanged(value)),
-                style: TextStyle(
-                  fontSize: screenWidth * 0.045,
-                ), // Responsive font
+                style: TextStyle(fontSize: screenWidth * 0.045),
                 decoration: const InputDecoration(
                   labelText: 'Password',
                   border: OutlineInputBorder(
@@ -143,10 +133,10 @@ class _LoginFormState extends State<LoginForm> {
                   ),
                 ),
               ),
-              SizedBox(height: screenHeight * 0.05), // Responsive spacing
+              SizedBox(height: screenHeight * 0.05),
               SizedBox(
                 width: double.infinity,
-                height: screenHeight * 0.065, // Responsive button height
+                height: screenHeight * 0.065,
 
                 child: ElevatedButton(
                   style: ButtonStyle(

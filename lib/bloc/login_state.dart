@@ -5,14 +5,14 @@ class LoginState extends Equatable {
   final UserType userType;
   final String email;
   final String password;
-  final String? loginResult; // <-- Add this
+  final String? loginResult;
   final String? userId;
 
   const LoginState({
     this.userType = UserType.customer,
     this.email = '',
     this.password = '',
-    this.loginResult, // <-- Add this
+    this.loginResult,
     this.userId,
   });
 
@@ -20,14 +20,14 @@ class LoginState extends Equatable {
     UserType? userType,
     String? email,
     String? password,
-    String? loginResult, // <-- Add this
+    String? loginResult,
     String? userId,
   }) {
     return LoginState(
       userType: userType ?? this.userType,
       email: email ?? this.email,
       password: password ?? this.password,
-      loginResult: loginResult, // <-- Always override for result
+      loginResult: loginResult,
       userId: userId ?? this.userId,
     );
   }
